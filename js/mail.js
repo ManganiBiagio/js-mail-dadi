@@ -2,6 +2,7 @@
 
 const emailEl = document.querySelector("[name='email']");
 const btnEl = document.querySelector("#btn-accedi");
+const divOutputEl= document.querySelector(".output");
 
 btnEl.addEventListener("click", myFunction);
 
@@ -19,9 +20,11 @@ function myFunction() {
     }
 
     if (validation) {
-        console.log("email valida")
+        console.log("email valida");
+        divOutputEl.innerHTML="email valida";
     }
     else {
         console.log("crea un account");
+        divOutputEl.innerHTML="email non valida";
     }
 }
